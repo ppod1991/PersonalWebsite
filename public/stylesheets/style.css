@@ -185,6 +185,9 @@ header.header {
   -ms-transition: 0.5s;
   transition: 0.5s;
 }
+.inFrontOfVideo > p {
+  font-family: 'Source Sans Pro' sans-serif;
+}
 .item {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -200,9 +203,12 @@ header.header {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-  filter: #808080; /* IE6-9 */
-  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+/* Firefox 3.5+ */
+  filter: #808080;
+/* IE6-9 */
+  -webkit-filter: grayscale(100%);
+/* Chrome 19+ & Safari 6+ */
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -296,7 +302,7 @@ header.header {
 .text > ul {
   margin-top: -2px;
 }
-@media all and (max-width: 600px) {
+@media all and (max-width 600px) {
   .item {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
