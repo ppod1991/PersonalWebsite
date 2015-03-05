@@ -1,0 +1,177 @@
+@import 'nib'
+
+html, body
+  width 100%
+  height 100%
+  margin 0
+  box-sizing border-box
+
+.circular
+  height 100px
+  width 100px
+  border-radius 50px
+  -webkit-border-radius 50px
+  -moz-border-radius 50px
+  background url('../../public/images/profile_picture.jpeg') no-repeat
+  background-size cover
+  display block
+  /*flex 1 100%*/
+  margin 10px
+
+video
+  width: auto; height: 100%;
+
+.modal
+  display none
+
+header > h1
+  font-family 'Source Sans Pro' sans-serif
+  font-weight 200
+  color black
+  font-size 60pt
+  /*flex 1 100%*/
+  margin 5px
+
+body
+  font font-family 'Source Sans Pro' sans-serif
+  font-weight 300
+
+.inFrontOfVideo > p
+  font-size 40pt
+  color #ffffff
+
+a
+  color #00B7FF
+
+.container
+  display -webkit-box
+  display -moz-box
+  display -ms-flexbox
+  display -webkit-flex
+  display flex
+  flex-flow row wrap
+  text-align center
+  align-items  stretch
+  height 100%
+  width 100%
+  margin 0;
+
+.container > *
+  display flex
+  flex-flow column
+  justify-content center
+  align-items center
+  align-content center
+
+header.header
+  flex 1 100%
+  text-align center
+  background white
+  display flex
+  align-items center
+  flex-flow column
+
+.item > .video
+  position absolute
+  top 0; left 0;
+  width: 100%
+  height: 100%
+  z-index -1
+  -webkit-filter:blur(2px) brightness(45%)
+  -ms-filter: blur(2px) brightness(45%)
+  -o-filter: blur(2px) brightness(45%)
+  filter:blur(2px) brightness(45%)
+  transition 0.5s
+
+
+.item:hover > .video
+  -webkit-filter:blur(0px)  brightness(100%)
+  -ms-filter: blur(0px)  brightness(100%)
+  -o-filter: blur(0px)  brightness(100%)
+  filter:blur(0px) brightness(100%)
+  transition 0.5s
+
+.item > .inFrontOfVideo
+  opacity 0.8
+  transition 0.5s
+
+.item:hover > .inFrontOfVideo
+  opacity 0
+  transition 0.5s
+
+.item
+  flex 1 50%
+  background black
+  height 300px
+  flex-basis 500px
+  cursor pointer
+  position relative
+  overflow hidden
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  transition 0.5s
+  border-left 4px solid white;
+  border-right 4px solid white;
+  border-bottom 8px solid white;
+
+.item.grayscale:hover
+  filter none
+  -webkit-filter grayscale(0%)
+  transition 0.5s
+
+
+/*Modal styles*/
+
+.vex.vex-theme-default
+  padding-top 10px
+
+
+.vex.vex-theme-default .vex-content
+  min-width 90%
+
+.media > .video > video
+  width 95%
+  height auto
+
+.modalTitle > *
+  font-family 'Source Sans Pro' sans-serif
+  font-weight 200
+  color black
+  text-align center
+  margin 5px
+
+.modalContent
+  display flex
+  flex-flow row wrap
+  align-items center
+
+.media
+  flex 3
+  flex-basis 300px
+.text
+  flex 1
+  flex-basis 100px
+
+.modalContent > *
+  font-family 'Source Sans Pro' sans-serif
+  font-weight 300
+  color black
+  text-align center
+
+.modalContent > .text
+  text-align left
+
+.text > ul
+  margin-top -2px
+
+
+
+@media all and (max-width 600px)
+  .item
+    flex 1 100%
+  .modalContent > *
+    flex 1 100%
+
+*, *:before, *:after
+    box-sizing inherit

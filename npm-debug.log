@@ -1,0 +1,168 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'nib' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'nib', null ]
+5 verbose cache add name=undefined spec="nib" args=["nib",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'nib',
+6 verbose parsed url   path: 'nib',
+6 verbose parsed url   href: 'nib' }
+7 silly lockFile ae909a05-nib nib
+8 verbose lock nib /Users/piyushpoddar/.npm/ae909a05-nib.lock
+9 silly lockFile ae909a05-nib nib
+10 silly lockFile ae909a05-nib nib
+11 verbose addNamed [ 'nib', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 30a48e40-nib nib@
+14 verbose lock nib@ /Users/piyushpoddar/.npm/30a48e40-nib.lock
+15 silly addNameRange { name: 'nib', range: '*', hasData: false }
+16 verbose request where is /nib
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id e88bc7c4d1d1d203
+19 verbose url raw /nib
+20 verbose url resolving [ 'https://registry.npmjs.org/', './nib' ]
+21 verbose url resolved https://registry.npmjs.org/nib
+22 verbose request where is https://registry.npmjs.org/nib
+23 info trying registry request attempt 1 at 23:38:48
+24 verbose etag "3GG8Y72ANKWK4JIZ4DIXP2VL0"
+25 http GET https://registry.npmjs.org/nib
+26 http 200 https://registry.npmjs.org/nib
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Mon, 02 Mar 2015 04:38:50 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     etag: '"3FFU6DIM3DRL91D3J4J6188Z1"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '26508',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-atl6230-ATL',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1425271129.910889,VS0,VE107',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly addNameRange number 2 { name: 'nib', range: '*', hasData: true }
+29 silly addNameRange versions [ 'nib',
+29 silly addNameRange   [ '0.0.1',
+29 silly addNameRange     '0.0.2',
+29 silly addNameRange     '0.0.3',
+29 silly addNameRange     '0.0.4',
+29 silly addNameRange     '0.0.5',
+29 silly addNameRange     '0.0.6',
+29 silly addNameRange     '0.0.7',
+29 silly addNameRange     '0.0.8',
+29 silly addNameRange     '0.1.0',
+29 silly addNameRange     '0.2.0',
+29 silly addNameRange     '0.3.0',
+29 silly addNameRange     '0.3.1',
+29 silly addNameRange     '0.3.2',
+29 silly addNameRange     '0.4.0',
+29 silly addNameRange     '0.4.1',
+29 silly addNameRange     '0.5.0',
+29 silly addNameRange     '0.6.0',
+29 silly addNameRange     '0.7.0',
+29 silly addNameRange     '0.7.1',
+29 silly addNameRange     '0.8.1',
+29 silly addNameRange     '0.8.2',
+29 silly addNameRange     '0.9.0',
+29 silly addNameRange     '0.9.1',
+29 silly addNameRange     '0.9.2',
+29 silly addNameRange     '1.0.0',
+29 silly addNameRange     '1.0.1',
+29 silly addNameRange     '1.0.2',
+29 silly addNameRange     '1.0.3',
+29 silly addNameRange     '1.0.4',
+29 silly addNameRange     '1.1.0' ] ]
+30 verbose addNamed [ 'nib', '1.1.0' ]
+31 verbose addNamed [ '1.1.0', '1.1.0' ]
+32 silly lockFile 08a8722b-nib-1-1-0 nib@1.1.0
+33 verbose lock nib@1.1.0 /Users/piyushpoddar/.npm/08a8722b-nib-1-1-0.lock
+34 silly lockFile fe8c51bd-stry-npmjs-org-nib-nib-1-1-0-tgz https://registry.npmjs.org/nib/-/nib-1.1.0.tgz
+35 verbose lock https://registry.npmjs.org/nib/-/nib-1.1.0.tgz /Users/piyushpoddar/.npm/fe8c51bd-stry-npmjs-org-nib-nib-1-1-0-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/nib/-/nib-1.1.0.tgz',
+36 verbose addRemoteTarball   '527c19662a10a2b565fe85e9b309d622aa7557d3' ]
+37 info retry fetch attempt 1 at 23:38:49
+38 verbose fetch to= /var/folders/rd/pn8l524d78753shlh5rkkn140000gp/T/npm-3232-ut4lNfeJ/registry.npmjs.org/nib/-/nib-1.1.0.tgz
+39 http GET https://registry.npmjs.org/nib/-/nib-1.1.0.tgz
+40 http 200 https://registry.npmjs.org/nib/-/nib-1.1.0.tgz
+41 silly lockFile fe8c51bd-stry-npmjs-org-nib-nib-1-1-0-tgz https://registry.npmjs.org/nib/-/nib-1.1.0.tgz
+42 silly lockFile fe8c51bd-stry-npmjs-org-nib-nib-1-1-0-tgz https://registry.npmjs.org/nib/-/nib-1.1.0.tgz
+43 silly lockFile 08a8722b-nib-1-1-0 nib@1.1.0
+44 silly lockFile 08a8722b-nib-1-1-0 nib@1.1.0
+45 silly lockFile 30a48e40-nib nib@
+46 silly lockFile 30a48e40-nib nib@
+47 silly resolved [ { name: 'nib',
+47 silly resolved     description: 'Stylus mixins and utilities',
+47 silly resolved     version: '1.1.0',
+47 silly resolved     license: 'MIT',
+47 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/nib.git' },
+47 silly resolved     dependencies: { stylus: '0.49.x' },
+47 silly resolved     devDependencies: { connect: '1.x', jade: '0.22.0', mocha: '*', should: '*' },
+47 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+47 silly resolved     main: 'lib/nib.js',
+47 silly resolved     engines: { node: '*' },
+47 silly resolved     scripts: { test: 'mocha', 'test-server': 'node test/server.js' },
+47 silly resolved     gitHead: '061612cf80110e53ef5a3749980e0bf4cdc124fa',
+47 silly resolved     bugs: { url: 'https://github.com/visionmedia/nib/issues' },
+47 silly resolved     homepage: 'https://github.com/visionmedia/nib',
+47 silly resolved     _id: 'nib@1.1.0',
+47 silly resolved     _shasum: '527c19662a10a2b565fe85e9b309d622aa7557d3',
+47 silly resolved     _from: 'nib@',
+47 silly resolved     _npmVersion: '1.4.28',
+47 silly resolved     _npmUser: { name: 'slang800', email: 'slang800@gmail.com' },
+47 silly resolved     maintainers: [ [Object], [Object] ],
+47 silly resolved     dist:
+47 silly resolved      { shasum: '527c19662a10a2b565fe85e9b309d622aa7557d3',
+47 silly resolved        tarball: 'http://registry.npmjs.org/nib/-/nib-1.1.0.tgz' },
+47 silly resolved     directories: {},
+47 silly resolved     _resolved: 'https://registry.npmjs.org/nib/-/nib-1.1.0.tgz' } ]
+48 info install nib@1.1.0 into /usr/local/lib
+49 info installOne nib@1.1.0
+50 verbose lib/node_modules/nib unbuild
+51 verbose tar unpack /Users/piyushpoddar/.npm/nib/1.1.0/package.tgz
+52 silly lockFile 55e836be-r-usr-local-lib-node-modules-nib tar:///usr/local/lib/node_modules/nib
+53 verbose lock tar:///usr/local/lib/node_modules/nib /Users/piyushpoddar/.npm/55e836be-r-usr-local-lib-node-modules-nib.lock
+54 silly lockFile 45901439-poddar-npm-nib-1-1-0-package-tgz tar:///Users/piyushpoddar/.npm/nib/1.1.0/package.tgz
+55 verbose lock tar:///Users/piyushpoddar/.npm/nib/1.1.0/package.tgz /Users/piyushpoddar/.npm/45901439-poddar-npm-nib-1-1-0-package-tgz.lock
+56 silly gunzTarPerm modes [ '755', '644' ]
+57 error Error: EACCES, mkdir '/usr/local/lib/node_modules/nib'
+57 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/nib']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/usr/local/lib/node_modules/nib',
+57 error   fstream_type: 'Directory',
+57 error   fstream_path: '/usr/local/lib/node_modules/nib',
+57 error   fstream_class: 'DirWriter',
+57 error   fstream_stack:
+57 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+57 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+57 error      'Object.oncomplete (fs.js:107:15)' ] }
+58 error Please try running this command again as root/Administrator.
+59 error System Darwin 14.0.0
+60 error command "node" "/usr/local/bin/npm" "install" "-g" "nib"
+61 error cwd /Users/piyushpoddar/Documents/PersonalWebsite
+62 error node -v v0.10.32
+63 error npm -v 1.4.28
+64 error path /usr/local/lib/node_modules/nib
+65 error fstream_path /usr/local/lib/node_modules/nib
+66 error fstream_type Directory
+67 error fstream_class DirWriter
+68 error code EACCES
+69 error errno 3
+70 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/nib'
+71 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+71 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+71 error fstream_stack Object.oncomplete (fs.js:107:15)
+72 verbose exit [ 3, true ]

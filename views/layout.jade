@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title=title
+    link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css')
+    script(src="../public/bower_components/jquery/dist/jquery.min.js")
+    script(src="../public/bower_components/vex/js/vex.combined.min.js")
+    script.
+      vex.defaultOptions.className = 'vex-theme-default'
+    link(rel='stylesheet' href='../public/bower_components/vex/css/vex.css')
+    link(rel='stylesheet' href='../public/bower_components/vex/css/vex-theme-default.css')
+    link(rel='stylesheet', href='../public/stylesheets/style.css')
+  body
+    block content
