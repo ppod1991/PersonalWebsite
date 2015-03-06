@@ -1,0 +1,65 @@
+.content
+    script.
+        var play = function playPause(videoID) {
+            var myVideo = document.getElementById(videoID);
+            myVideo.play();
+        };
+        var pause = function playPause(videoID) {
+            var myVideo = document.getElementById(videoID);
+            myVideo.pause();
+        };
+        var openModal = function (modalString, mainVideoID, modalVideoID) {
+            console.log("Open pressed");
+            var modal = $(modalString).clone();
+            //modal.attr('id', modalString + 'Clone');
+            vex.open({content: modal});
+            var mainVid = document.getElementById(mainVideoID);
+            var modalVid = modal.find('#' + modalVideoID)[0];
+            modalVid.currentTime = mainVid.currentTime;
+            modalVid.play();
+            mainVid.pause();
+        }
+    header.header
+        h1(style="font-variant: small-caps;") Piyush Poddar
+        h3(style="font-family: Open Sans; margin-top: -5px; font-weight: 100; margin-bottom:5px") software engineer
+        .circular
+        .contact
+            a(href='http://github.com/ppod1991')
+                i.fa(class='fa-github fa-lg')
+            a(href='http://www.linkedin.com/in/ppoddar1')
+                i.fa(class='fa-linkedin')
+            a(href='mailto:ppod1991@gmail.com')
+                i.fa(class='fa-envelope-o fa-lg')
+    .item(onclick="vex.open({content: $(blogModal).clone()});")
+        p Blog
+    //.item(class='grayscale' onclick="openModal(matchflareModal,'matchflarevideo','matchflarevideoModal');" onmouseover="play('matchflarevideo')" onmouseout="pause('matchflarevideo')")
+    a.item(class='grayscale' href="/#/matchflare" onmouseover="play('matchflarevideo')" onmouseout="pause('matchflarevideo')")
+        .video
+            video(muted loop id="matchflarevideo")
+                source(src="../public/images/matchflare_iOS.mp4")
+        .inFrontOfVideo
+            p Matchflare
+    a.item(class='grayscale' href="/#/diial" onmouseover ="play('diialvideo')" onmouseout="pause('diialvideo')")
+        .video
+            video(muted loop id="diialvideo")
+                source(src="../public/images/diial_android.mp4")
+        .inFrontOfVideo
+            p Diial
+    a.item(class='grayscale' href="/#/taste" onmouseover="play('tastevideo')" onmouseout="pause('tastevideo')")
+        .video
+            video(muted loop id="tastevideo")
+                source(src="../public/images/taste_iOS.mp4")
+        .inFrontOfVideo
+            p Taste
+    a.item(class='grayscale' href="/#/snake" onmouseover="play('snakevideo')" onmouseout="pause('snakevideo')")
+        .video
+            video(muted loop id="snakevideo")
+                source(src="../public/images/snake_video.mp4")
+        .inFrontOfVideo
+            p Haptic Snake Robot Controller
+    a.item(class='grayscale' href="/#/septoplasty" onmouseover="play('septoplastyvideo')" onmouseout="pause('septoplastyvideo')")
+        .video
+            video(muted loop id="septoplastyvideo")
+                source(src="../public/images/septoplasty_video.mp4")
+        .inFrontOfVideo
+            p Surgical Visualization & Classification

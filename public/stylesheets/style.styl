@@ -61,24 +61,22 @@ a
   color #00B7FF
 
 .container
-  display -webkit-box
-  display -moz-box
-  display -ms-flexbox
-  display -webkit-flex
-  display flex
-  flex-flow row wrap
-  text-align center
-  align-items  stretch
+  /*display flex*/
+  /*flex-flow row wrap*/
+  /*text-align center*/
+  /*align-items  stretch*/
   height 100%
   width 100%
   margin 0;
 
-.container > *
+.content
+  height:100%;
+  width:100%
   display flex
-  flex-flow column
-  justify-content center
-  align-items center
-  align-content center
+  flex-flow row wrap
+  text-align center
+  align-items  stretch
+  margin 0;
 
 header.header
   flex 1 100%
@@ -94,6 +92,7 @@ footer.footer
   background none
   align-items center
   flex-flow row
+  display flex
   min-height 50px
 
 .item > .video
@@ -127,8 +126,13 @@ footer.footer
 .inFrontOfVideo > p
   font-family 'Source Sans Pro'
 
+
 .item
   flex 1 50%
+  display flex
+  align-items center
+  justify-content center
+  flex-flow column wrap
   background black
   height 300px
   flex-basis 500px
@@ -141,6 +145,7 @@ footer.footer
   border-left 4px solid white;
   border-right 4px solid white;
   border-bottom 8px solid white;
+  text-decoration none
 
 .item.grayscale:hover
   filter none
@@ -191,8 +196,6 @@ footer.footer
 
 .text > ul
   margin-top -2px
-
-
 
 @media all and (max-width: 600px)
   .item

@@ -1,73 +1,8 @@
 extends layout
 
 block content
-    script.
-        var play = function playPause(videoID)
-        {
-            var myVideo=document.getElementById(videoID);
-            myVideo.play();
-        };
-
-        var pause = function playPause(videoID) {
-            var myVideo = document.getElementById(videoID);
-            myVideo.pause();
-        };
-
-        var openModal = function(modalString, mainVideoID,modalVideoID) {
-            var modal = $(modalString).clone();
-            //modal.attr('id', modalString + 'Clone');
-            vex.open({content: modal});
-            var mainVid = document.getElementById(mainVideoID);
-            var modalVid = modal.find('#' + modalVideoID)[0];
-            modalVid.currentTime = mainVid.currentTime;
-            modalVid.play();
-            mainVid.pause();
-        }
-
     .container
-        header.header
-            h1(style="font-variant: small-caps;") Piyush Poddar
-            h3(style="font-family: Open Sans; margin-top: -5px; font-weight: 100; margin-bottom:5px") software engineer
-            .circular
-            .contact
-                a(href='http://github.com/ppod1991')
-                    i.fa(class='fa-github fa-lg')
-                a(href='http://www.linkedin.com/in/ppoddar1')
-                    i.fa(class='fa-linkedin')
-                a(href='mailto:ppod1991@gmail.com')
-                    i.fa(class='fa-envelope-o fa-lg')
-        .item(onclick="vex.open({content: $(blogModal).clone()});")
-            p Blog
-        .item(class='grayscale' onclick="openModal(matchflareModal,'matchflarevideo','matchflarevideoModal');" onmouseover="play('matchflarevideo')" onmouseout="pause('matchflarevideo')")
-            .video
-                video(muted loop id="matchflarevideo")
-                    source(src="../public/images/matchflare_iOS.mp4")
-            .inFrontOfVideo
-                p Matchflare
-        .item(class='grayscale' onclick="openModal(diialModal,'diialvideo','diialvideoModal');" onmouseover ="play('diialvideo')" onmouseout="pause('diialvideo')")
-            .video
-                video(muted loop id="diialvideo")
-                    source(src="../public/images/diial_android.mp4")
-            .inFrontOfVideo
-                p Diial
-        .item(class='grayscale' onclick="openModal(tasteModal,'tastevideo','tastevideoModal');" onmouseover="play('tastevideo')" onmouseout="pause('tastevideo')")
-            .video
-                video(muted loop id="tastevideo")
-                    source(src="../public/images/taste_iOS.mp4")
-            .inFrontOfVideo
-                p Taste
-        .item(class='grayscale' onclick="openModal(snakeModal,'snakevideo','snakevideoModal');" onmouseover="play('snakevideo')" onmouseout="pause('snakevideo')")
-            .video
-                video(muted loop id="snakevideo")
-                    source(src="../public/images/snake_video.mp4")
-            .inFrontOfVideo
-                p Haptic Snake Robot Controller
-        .item(class='grayscale' onclick="openModal(septoplastyModal,'septoplastyvideo','septoplastyvideoModal');" onmouseover="play('septoplastyvideo')" onmouseout="pause('septoplastyvideo')")
-            .video
-                video(muted loop id="septoplastyvideo")
-                    source(src="../public/images/septoplasty_video.mp4")
-            .inFrontOfVideo
-                p Surgical Visualization & Classification
+        div(ng-view)
         footer.footer
             a(href='mailto:ppod1991@gmail.com') ppod1991@gmail.com
                 i.fa(class='fa-envelope-o fa-lg')
@@ -75,15 +10,13 @@ block content
                 i.fa(class='fa-linkedin')
             a(href='http://github.com/ppod1991') github
                 i.fa(class='fa-github fa-lg')
-
-
-    .modal
-        include modals/blog
-        include modals/matchflare
-        include modals/diial
-        include modals/taste
-        include modals/septoplasty
-        include modals/snake
+    //.modal
+    //    include modals/blog
+    //    include modals/matchflare
+    //    include modals/diial
+    //    include modals/taste
+    //    include modals/septoplasty
+    //    include modals/snake
 
 
 
