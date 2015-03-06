@@ -4,7 +4,8 @@
    .modalContent
       .media
          .video
-            video(muted controls id="tastevideoModal")
+            video(autoplay muted controls id="tastevideoModal")
+               source(src="../public/images/taste_iOS.webmhd.webm")
                source(src="../public/images/taste_iOS.mp4")
       .text
          | <strong> Taste lets you take and share pictures at local businesses in exchange for gifts for you and your friends! </strong>
@@ -18,4 +19,9 @@
             li Custom REST API via NodeJS & PostgreSQL
             li Responsive website via Bootstrap + AngularJS
             li Google Analytics & Google Maps API
-
+script.
+   var vid = document.getElementById('tastevideoModal');
+   vid.addEventListener('loadeddata', function () {
+      vid.currentTime = getParameterByName('t');
+      vid.play();
+   }, false);

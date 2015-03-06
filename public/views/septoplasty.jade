@@ -5,7 +5,8 @@
         .modalContent
                 .media
                         .video
-                                video(muted controls id="septoplastyvideoModal")
+                                video(autoplay muted controls id="septoplastyvideoModal")
+                                        source(src="../public/images/septoplasty_video.webmhd.webm")
                                         source(src="../public/images/septoplasty_video.mp4")
                 .text
                         | <strong>Septoplasty procedures are highly unstructured surgical tasks. This lack of structure makes it difficult to quantify surgical skill. My work: </strong>
@@ -13,5 +14,10 @@
                                 li Extracted novel motion-based features for kernel support vector machine to improve automatic classification of surgical skill to 91%
                                 li Developed real-time 3D tool-tracking visualization tool
                                 li Built intuitive video segmentation tool to reduce time spent in labeling segments of live-surgical videos
-
+script.
+        var vid = document.getElementById('septoplastyvideoModal');
+        vid.addEventListener('loadeddata', function () {
+                vid.currentTime = getParameterByName('t');
+                vid.play();
+        }, false);
 

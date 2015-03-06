@@ -5,7 +5,8 @@
    .modalContent
       .media
          .video
-            video(muted controls id="snakevideoModal")
+            video(autoplay muted controls id="snakevideoModal")
+               source(src="../public/images/snake_video.webmhd.webm")
                source(src="../public/images/snake_video.mp4")
       .text
          | <strong> Developed intuitive interface between a haptic controller (Sensable Phantom Premium) and a Dexterous Surgical Robot </strong>
@@ -18,3 +19,9 @@
          ul
             li Sensable Phantom API
             li Developed in C++ and MATLAB
+script.
+   var vid = document.getElementById('snakevideoModal');
+   vid.addEventListener('loadeddata', function () {
+      vid.currentTime = getParameterByName('t');
+      vid.play();
+   }, false);

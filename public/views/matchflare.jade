@@ -2,22 +2,33 @@
     .modalTitle
         h1 Matchflare
         h3 go play with matches
-    .modalContent
-        .media
-            .video
-                video(muted controls id="matchflarevideoModal")
-                    source(src="../public/images/matchflare_iOS.mp4")
-        .text
-            | <strong> Matchflare lets you play matchmaker with your friends! </strong>
-            ul
-                li Built for both iOS and Android
-                li Match anonymously
-                li Register over SMS in seconds
-            | <strong> Tech Used: </strong>
-            ul
-                li Cross-platform real-time chat server via Websockets
-                li Push notifications via GCM and APNS
-                li Persistent image storage via Amazon S3
-                li Custom REST API via NodeJS & PostgreSQL
-                li Responsive website via Boostrap + AngularJS
-                li Nexmo SMS API + Google Analytics
+    //script.
+    //    var vid = document.getElementById('matchflarevideoModal');
+    //    vid.currentTime = $scope.mostRecentTime;
+    //    console.log("Most recent time: " + mostRecentTime);
+   .modalContent
+    .media
+        .video
+            video(muted controls id="matchflarevideoModal")
+                source(src="../public/images/matchflare_iOS.webmhd.webm")
+                source(src="../public/images/matchflare_iOS.mp4")
+    .text
+        | <strong> Matchflare lets you play matchmaker with your friends! </strong>
+        ul
+            li Built for both iOS and Android
+            li Match anonymously
+            li Register over SMS in seconds
+        | <strong> Tech Used: </strong>
+        ul
+            li Cross-platform real-time chat server via Websockets
+            li Push notifications via GCM and APNS
+            li Persistent image storage via Amazon S3
+            li Custom REST API via NodeJS & PostgreSQL
+            li Responsive website via Boostrap + AngularJS
+            li Nexmo SMS API + Google Analytics
+script.
+    var vid = document.getElementById('matchflarevideoModal');
+    vid.addEventListener('loadeddata', function () {
+        vid.currentTime = getParameterByName('t');
+        vid.play();
+    }, false);

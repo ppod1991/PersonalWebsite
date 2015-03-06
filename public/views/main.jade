@@ -30,36 +30,38 @@
                 i.fa(class='fa-linkedin')
             a(href='mailto:ppod1991@gmail.com')
                 i.fa(class='fa-envelope-o fa-lg')
-    .item(onclick="vex.open({content: $(blogModal).clone()});")
-        p Blog
-    //.item(class='grayscale' onclick="openModal(matchflareModal,'matchflarevideo','matchflarevideoModal');" onmouseover="play('matchflarevideo')" onmouseout="pause('matchflarevideo')")
-    a.item(class='grayscale' href="/#/matchflare" onmouseover="play('matchflarevideo')" onmouseout="pause('matchflarevideo')")
+    a.item(href="" class='grayscale' ng-click='open("matchflare","matchflarevideo")' onmouseover="play('matchflarevideo')" onmouseout="pause('matchflarevideo')")
         .video
             video(muted loop id="matchflarevideo")
+                source(src="../public/images/matchflare_iOS.webmhd.webm")
                 source(src="../public/images/matchflare_iOS.mp4")
         .inFrontOfVideo
             p Matchflare
-    a.item(class='grayscale' href="/#/diial" onmouseover ="play('diialvideo')" onmouseout="pause('diialvideo')")
+    a.item(href="" class='grayscale' ng-click='open("diial","diialvideo")' onmouseover ="play('diialvideo')" onmouseout="pause('diialvideo')")
         .video
             video(muted loop id="diialvideo")
+                source(src="../public/images/diial_android.webmhd.webm")
                 source(src="../public/images/diial_android.mp4")
         .inFrontOfVideo
             p Diial
-    a.item(class='grayscale' href="/#/taste" onmouseover="play('tastevideo')" onmouseout="pause('tastevideo')")
+    a.item(href="" class='grayscale' ng-click='open("taste","tastevideo")' onmouseover="play('tastevideo')" onmouseout="pause('tastevideo')")
         .video
             video(muted loop id="tastevideo")
+                source(src="../public/images/taste_iOS.webmhd.webm")
                 source(src="../public/images/taste_iOS.mp4")
         .inFrontOfVideo
             p Taste
-    a.item(class='grayscale' href="/#/snake" onmouseover="play('snakevideo')" onmouseout="pause('snakevideo')")
+    a.item(href="" class='grayscale' ng-click='open("snake","snakevideo")' onmouseover="play('snakevideo')" onmouseout="pause('snakevideo')")
         .video
             video(muted loop id="snakevideo")
-                source(src="../public/images/snake_video.mp4")
+                source(src="../public/images/snake_video.webmhd.webm")
+                source(src="../public/images/snake_video.webmhd.mp4")
         .inFrontOfVideo
             p Haptic Snake Robot Controller
-    a.item(class='grayscale' href="/#/septoplasty" onmouseover="play('septoplastyvideo')" onmouseout="pause('septoplastyvideo')")
+    a.item(href="" class='grayscale' ng-click='open("septoplasty","septoplastyvideo")' onmouseover="play('septoplastyvideo')" onmouseout="pause('septoplastyvideo')")
         .video
             video(muted loop id="septoplastyvideo")
+                source(src="../public/images/septoplasty_video.webmhd.webm")
                 source(src="../public/images/septoplasty_video.mp4")
         .inFrontOfVideo
             p Surgical Visualization & Classification

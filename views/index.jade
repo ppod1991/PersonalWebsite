@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    .container
+    .container(ng-controller="mainController")
         div(ng-view)
         footer.footer
             a(href='mailto:ppod1991@gmail.com') ppod1991@gmail.com
@@ -10,6 +10,13 @@ block content
                 i.fa(class='fa-linkedin')
             a(href='http://github.com/ppod1991') github
                 i.fa(class='fa-github fa-lg')
+        script.
+            function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.hash);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
     //.modal
     //    include modals/blog
     //    include modals/matchflare
