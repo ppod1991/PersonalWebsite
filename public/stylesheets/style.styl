@@ -6,17 +6,34 @@ html, body
   margin 0
   box-sizing border-box
 
+.contact
+  margin-top 5px
+  margin-bottom 10px
+
+.contact > a
+  font-size 18px
+  color #B8B8B8
+  margin-left 8px
+  margin-right 8px
+  margin-top 5px
+  margin-bottom 5px
+  transition all 0.2s ease-in-out
+
+a:hover
+  color #666666
+
 .circular
-  height 100px
-  width 100px
-  border-radius 50px
-  -webkit-border-radius 50px
-  -moz-border-radius 50px
+  height 80px
+  width 80px
+  border-radius 40px
+  -webkit-border-radius 40px
+  -moz-border-radius 40px
   background url('../../public/images/profile_picture.jpeg') no-repeat
   background-size cover
   display block
-  /*flex 1 100%*/
-  margin 10px
+  box-shadow 0 0 5px rgba(0, 0, 0, .6)
+  -webkit-box-shadow 0 0 5px rgba(0, 0, 0, .6)
+  -moz-box-shadow 0 0 5px rgba(0, 0, 0, .6)
 
 video
   width: auto; height: 100%;
@@ -25,10 +42,10 @@ video
   display none
 
 header > h1
-  font-family 'Source Sans Pro' sans-serif
+  font-family 'Open Sans' sans-serif
   font-weight 200
   color black
-  font-size 60pt
+  font-size 30pt
   /*flex 1 100%*/
   margin 5px
 
@@ -69,7 +86,15 @@ header.header
   background white
   display flex
   align-items center
-  flex-flow column
+  flex-flow column flow
+
+footer.footer
+  flex 1 100%
+  text-align center
+  background none
+  align-items center
+  flex-flow row
+  min-height 50px
 
 .item > .video
   position absolute
@@ -101,7 +126,7 @@ header.header
 
 .inFrontOfVideo > p
   font-family 'Source Sans Pro' sans-serif
-  
+
 .item
   flex 1 50%
   background black
@@ -178,3 +203,16 @@ header.header
 
 *, *:before, *:after
     box-sizing inherit
+
+i
+  margin-left 5px
+
+.footer > a
+  color #B8B8B8
+  flex 1
+  text-decoration none
+  font-family "Open Sans", sans-serif
+  transition all 0.3s ease-in-out
+
+.footer > a:hover
+  color #515151

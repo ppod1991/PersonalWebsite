@@ -26,8 +26,16 @@ block content
 
     .container
         header.header
-            h1 Piyush Poddar
+            h1(style="font-variant: small-caps;") Piyush Poddar
+            h3(style="font-family: Open Sans; margin-top: -5px; font-weight: 100; margin-bottom:5px") software engineer
             .circular
+            .contact
+                a(href='http://github.com/ppod1991')
+                    i.fa(class='fa-github fa-lg')
+                a(href='http://www.linkedin.com/in/ppoddar1')
+                    i.fa(class='fa-linkedin')
+                a(href='mailto:ppod1991@gmail.com')
+                    i.fa(class='fa-envelope-o fa-lg')
         .item(onclick="vex.open({content: $(blogModal).clone()});")
             p Blog
         .item(class='grayscale' onclick="openModal(matchflareModal,'matchflarevideo','matchflarevideoModal');" onmouseover="play('matchflarevideo')" onmouseout="pause('matchflarevideo')")
@@ -60,6 +68,15 @@ block content
                     source(src="../public/images/septoplasty_video.mp4")
             .inFrontOfVideo
                 p Surgical Visualization & Classification
+        footer.footer
+            a(href='mailto:ppod1991@gmail.com') ppod1991@gmail.com
+                i.fa(class='fa-envelope-o fa-lg')
+            a(href='http://www.linkedin.com/in/ppoddar1') linkedIn
+                i.fa(class='fa-linkedin')
+            a(href='http://github.com/ppod1991') github
+                i.fa(class='fa-github fa-lg')
+
+
     .modal
         include modals/blog
         include modals/matchflare

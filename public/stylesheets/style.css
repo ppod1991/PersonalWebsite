@@ -7,20 +7,42 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.contact {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.contact > a {
+  font-size: 18px;
+  color: #b8b8b8;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  color: #666;
+}
 .circular {
-  height: 100px;
-  width: 100px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
+  height: 80px;
+  width: 80px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
   background: url("../../public/images/profile_picture.jpeg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   display: block;
-/*flex 1 100%*/
-  margin: 10px;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,0.6);
 }
 video {
   width: auto;
@@ -30,10 +52,10 @@ video {
   display: none;
 }
 header > h1 {
-  font-family: 'Source Sans Pro' sans-serif;
+  font-family: 'Open Sans' sans-serif;
   font-weight: 200;
   color: #000;
-  font-size: 60pt;
+  font-size: 30pt;
 /*flex 1 100%*/
   margin: 5px;
 }
@@ -133,9 +155,33 @@ header.header {
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   -o-box-orient: vertical;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
+  -webkit-flex-flow: column flow;
+  -ms-flex-flow: column flow;
+  flex-flow: column flow;
+}
+footer.footer {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 100%;
+  -ms-flex: 1 100%;
+  flex: 1 100%;
+  text-align: center;
+  background: none;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  min-height: 50px;
 }
 .item > .video {
   position: absolute;
@@ -203,12 +249,9 @@ header.header {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-/* Firefox 3.5+ */
-  filter: #808080;
-/* IE6-9 */
-  -webkit-filter: grayscale(100%);
-/* Chrome 19+ & Safari 6+ */
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: #808080; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -302,7 +345,7 @@ header.header {
 .text > ul {
   margin-top: -2px;
 }
-@media all and (max-width 600px) {
+@media all and (max-width: 600px) {
   .item {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -328,4 +371,27 @@ header.header {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+}
+i {
+  margin-left: 5px;
+}
+.footer > a {
+  color: #b8b8b8;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.footer > a:hover {
+  color: #515151;
 }
