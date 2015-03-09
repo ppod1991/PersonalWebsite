@@ -3,8 +3,8 @@
 // Declare app level module which depends on filters, and services
 angular.module('personalApp.config',['ngRoute'])
 
-app.config(['$routeProvider',
-    function($routeProvider) {
+app.config(['$routeProvider','$locationProvider',
+    function($routeProvider,$locationProvider) {
 
         $routeProvider
             .when('/',{templateUrl:'../public/views/main.html'})
@@ -14,4 +14,6 @@ app.config(['$routeProvider',
             .when('/snake',{templateUrl:'../public/views/snake.html'})
             .when('/septoplasty',{templateUrl:'../public/views/septoplasty.html'})
             .otherwise(       { redirectTo: '/' });
+
+        $locationProvider.html5Mode(true);
     }]);
