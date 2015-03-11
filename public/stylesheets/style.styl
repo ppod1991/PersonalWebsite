@@ -6,6 +6,16 @@ html, body
   margin 0
   box-sizing border-box
 
+.icons > a
+  color #dedede
+  transition all 0.2s ease-in-out
+  margin-left 10px
+  margin-right 10px
+  margin-top 5px
+
+.icons > a:hover
+  color #777777
+
 .contact
   margin-top 5px
   margin-bottom 10px
@@ -19,7 +29,10 @@ html, body
   margin-bottom 5px
   transition all 0.2s ease-in-out
 
-a:hover
+.contact, .footer > a > i
+  margin-left 5px
+
+.contact > a:hover
   color #666666
 
 .circular
@@ -56,9 +69,6 @@ body
 .inFrontOfVideo > p
   font-size 40pt
   color #ffffff
-
-a
-  color #00B7FF
 
 .container
   /*display flex*/
@@ -160,14 +170,14 @@ footer.footer
   height auto
 
 .modalTitle
-  margin-top 10px
-  
+  margin-top 5px
+
 .modalTitle > *
   font-family 'Source Sans Pro'
   font-weight 200
   color black
   text-align center
-  margin 5px
+  margin 3px
 
 .modalContent
   display flex
@@ -204,9 +214,6 @@ footer.footer
 
 *, *:before, *:after
     box-sizing inherit
-
-i
-  margin-left 5px
 
 .footer > a
   color #B8B8B8

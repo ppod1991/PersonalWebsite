@@ -7,6 +7,20 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.icons > a {
+  color: #dedede;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.icons > a:hover {
+  color: #777;
+}
 .contact {
   margin-top: 5px;
   margin-bottom: 10px;
@@ -24,7 +38,11 @@ body {
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-a:hover {
+.contact,
+.footer > a > i {
+  margin-left: 5px;
+}
+.contact > a:hover {
   color: #666;
 }
 .circular {
@@ -66,9 +84,6 @@ body {
 .inFrontOfVideo > p {
   font-size: 40pt;
   color: #fff;
-}
-a {
-  color: #00b7ff;
 }
 .container {
 /*display flex*/
@@ -261,10 +276,8 @@ footer.footer {
 /*cursor pointer*/
   position: relative;
   overflow: hidden;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-/* Firefox 3.5+ */
-  -webkit-filter: grayscale(100%);
-/* Chrome 19+ & Safari 6+ */
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -290,14 +303,14 @@ footer.footer {
   height: auto;
 }
 .modalTitle {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .modalTitle > * {
   font-family: 'Source Sans Pro';
   font-weight: 200;
   color: #000;
   text-align: center;
-  margin: 5px;
+  margin: 3px;
 }
 .modalContent {
   display: -webkit-box;
@@ -389,9 +402,6 @@ footer.footer {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
-}
-i {
-  margin-left: 5px;
 }
 .footer > a {
   color: #b8b8b8;

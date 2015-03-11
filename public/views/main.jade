@@ -8,17 +8,6 @@
             var myVideo = document.getElementById(videoID);
             myVideo.pause();
         };
-        var openModal = function (modalString, mainVideoID, modalVideoID) {
-            console.log("Open pressed");
-            var modal = $(modalString).clone();
-            //modal.attr('id', modalString + 'Clone');
-            vex.open({content: modal});
-            var mainVid = document.getElementById(mainVideoID);
-            var modalVid = modal.find('#' + modalVideoID)[0];
-            modalVid.currentTime = mainVid.currentTime;
-            modalVid.play();
-            mainVid.pause();
-        }
     header.header
         h1(style="font-variant: small-caps;") Piyush Poddar
         h3(style="font-family: Open Sans; margin-top: -5px; font-weight: 100; margin-bottom:5px") software engineer

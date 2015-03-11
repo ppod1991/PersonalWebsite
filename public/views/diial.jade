@@ -1,30 +1,34 @@
-#diialModal
-   .modalTitle
-      h1 Diial
-      h3 customer service for today
-   .modalContent
-      .media
-         .video
-            video(autoplay muted controls id="diialvideoModal")
-               source(src="../public/images/diial_android.webmhd.webm")
-               source(src="../public/images/diial_android.mp4")
-      .text
-         | <strong> Diial uses the capabilities of smartphones to improve customer support: </strong>
-         ul
-            li Replaces IVR ('Press 1 if you are having trouble') with lists of options
-            li Replaces elevator hold music with games
-            li Autofills personal info (name, address, etc.)
-            li Enables in-call photo capture & send (i.e. to troubleshoot your cable layout)
+.icons
+   a(href='/' style='float: left;')
+      i.fa(class='fa-chevron-left fa-2x')
+   a(href='/' style='float: right;')
+      i.fa(class='fa-home fa-2x')
+.modalTitle
+   h1 Diial
+   h3 customer service for today
+.modalContent
+   .media
+      .video
+         video(autoplay muted controls id="diialvideoModal")
+            source(src="../public/images/diial_android.webmhd.webm")
+            source(src="../public/images/diial_android.mp4")
+   .text
+      | <strong> Diial uses the capabilities of smartphones to improve customer support: </strong>
+      ul
+         li Replaces IVR ('Press 1 if you are having trouble') with lists of options
+         li Replaces elevator hold music with games
+         li Autofills personal info (name, address, etc.)
+         li Enables in-call photo capture & send (i.e. to troubleshoot your cable layout)
 
-         | <strong> Tech Used: </strong>
-         ul
-            li Android SDK
-            li Twilio Voice API
-            li Real-time 2-way photo & text sending via Websockets
-            li REST API > NodeJS & PostgreSQL
-            li Interactive Agent Console > AngularJS
+      | <strong> Tech Used: </strong>
+      ul
+         li Android SDK
+         li Twilio Voice API
+         li Real-time 2-way photo & text sending via Websockets
+         li REST API > NodeJS & PostgreSQL
+         li Interactive Agent Console > AngularJS
 
-         p Diial was invited to interview with YC
+      p Diial was invited to interview with YC
 script.
    var vid = document.getElementById('diialvideoModal');
    vid.addEventListener('loadeddata', function () {

@@ -1,24 +1,28 @@
-#snakeModal
-   .modalTitle
-      h1 Haptic Interface for Improved Surgical Control
-      h3 Applied Physics Laboratory
-   .modalContent
-      .media
-         .video
-            video(autoplay muted controls id="snakevideoModal")
-               source(src="../public/images/snake_video.webmhd.webm")
-               source(src="../public/images/snake_video.mp4")
-      .text
-         | <strong> Developed intuitive interface between a haptic controller (Sensable Phantom Premium) and a Dexterous Surgical Robot </strong>
-         ul
-            li Mapped gestures from 3D Cartesian controller coordinates to Cylindrical robot coordinates
-            li Intuitive Force-Feedback
-            li Collision Detection
-            li Auto-Calibration
-         | <strong> Tech Used: </strong>
-         ul
-            li Sensable Phantom API
-            li Developed in C++ and MATLAB
+.icons
+   a(href='/' style='float: left;')
+      i.fa(class='fa-chevron-left fa-2x')
+   a(href='/' style='float: right;')
+      i.fa(class='fa-home fa-2x')
+.modalTitle
+   h1 Haptic Interface for Improved Surgical Control
+   h3 Applied Physics Laboratory
+.modalContent
+   .media
+      .video
+         video(autoplay muted controls id="snakevideoModal")
+            source(src="../public/images/snake_video.webmhd.webm")
+            source(src="../public/images/snake_video.mp4")
+   .text
+      | <strong> Developed intuitive interface between a haptic controller (Sensable Phantom Premium) and a Dexterous Surgical Robot </strong>
+      ul
+         li Mapped gestures from 3D Cartesian controller coordinates to Cylindrical robot coordinates
+         li Intuitive Force-Feedback
+         li Collision Detection
+         li Auto-Calibration
+      | <strong> Tech Used: </strong>
+      ul
+         li Sensable Phantom API
+         li Developed in C++ and MATLAB
 script.
    var vid = document.getElementById('snakevideoModal');
    vid.addEventListener('loadeddata', function () {
