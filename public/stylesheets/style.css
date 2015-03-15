@@ -376,7 +376,7 @@ footer.footer {
 .text > ul {
   text-align: left;
 }
-@media all and (max-width: 600px) {
+@media all and (max-width: 760px) {
   .item {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -444,6 +444,7 @@ footer.footer {
   -webkit-align-items: center;
   align-items: center;
   justify-items: center;
+  padding-bottom: 10px;
 }
 .tabbed > p {
   -webkit-box-flex: 1;

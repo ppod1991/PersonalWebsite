@@ -9,8 +9,11 @@
    .media
       .video
          video(autoplay muted controls id="tastevideoModal")
-            source(src="../public/images/taste_iOS.webmhd.webm")
-            source(src="../public/images/taste_iOS.mp4")
+            source(src="../public/images/taste_android.webmhd.webm")
+            source(src="../public/images/taste_android.mp4")
+      .tabbed
+         p#android(style='font-weight: bold; background-color: #e6e6e6;' onclick="playOther('#android','#iOS','../public/images/taste_android.webmhd.webm','../public/images/taste_android.mp4')") Android
+         p#iOS(onclick="playOther('#iOS','#android','../public/images/taste_iOS.webmhd.webm','../public/images/taste_iOS.mp4')") iOS
    .text
       | <strong> Taste lets you take and share pictures at local businesses in exchange for gifts for you and your friends! </strong>
       ul

@@ -3,6 +3,19 @@ name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
     results = regex.exec(location.hash);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var playOther = function (thisElement, other, src1, src2) {
+    $(thisElement)[0].style.fontWeight = 'bold';
+    $(thisElement)[0].style.backgroundColor = '#e6e6e6';
+    $(other)[0].style.fontWeight = '200';
+    $(other)[0].style.backgroundColor = 'white';
+    var sources = vid.getElementsByTagName('source');
+    sources[0].src = src1;
+    sources[1].src = src2;
+    vid.load();
+    vid.play();
+    console.log('play');
 }</script></div><!--.modal--><!--    include modals/blog--><!--    include modals/matchflare--><!--    include modals/diial--><!--    include modals/taste--><!--    include modals/septoplasty--><!--    include modals/snake-->
 
 <script type="text/javascript" src="../public/bower_components/angular/angular.min.js"></script><script type="text/javascript" src="../public/bower_components/angular-route/angular-route.min.js"></script><script type="text/javascript" src="../public/js/app.js"></script><script type="text/javascript" src="../public/js/config.js"></script><script type="text/javascript" src="../public/js/controllers/mainController.js"></script><!--script(type="text/javascript" src="../public/js/controllers/videoController.js")-->
