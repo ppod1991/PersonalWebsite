@@ -10,8 +10,11 @@
     .media
         .video
             video(muted controls id="matchflarevideoModal")
-                source(src="../public/images/matchflare_iOS.webmhd.webm")
-                source(src="../public/images/matchflare_iOS.mp4")
+                source(src="../public/images/matchflare_android.webmhd.webm")
+                source(src="../public/images/matchflare_android.mp4")
+        .tabbed
+            p#android(style='font-weight: bold; background-color: #e6e6e6;' onclick="play('#android','#iOS','../public/images/matchflare_android.webmhd.webm','../public/images/matchflare_android.mp4')") Android
+            p#iOS(onclick="play('#iOS','#android','../public/images/matchflare_ios.webmhd.webm','../public/images/matchflare_ios.mp4')") iOS
     .text
         | <strong> Matchflare lets you play matchmaker with your friends! </strong>
         ul
@@ -32,3 +35,16 @@ script.
         vid.currentTime = getParameterByName('t');
         vid.play();
     }, false);
+
+    var play = function(thisElement, other, src1, src2) {
+        $(thisElement)[0].style.fontWeight = 'bold';
+        $(thisElement)[0].style.backgroundColor = '#e6e6e6';
+        $(other)[0].style.fontWeight = '200';
+        $(other)[0].style.backgroundColor = 'white';
+        var sources = vid.getElementsByTagName('source');
+        sources[0].src = src1;
+        sources[1].src = src2;
+        vid.load();
+        vid.play();
+        console.log('play');
+    }
